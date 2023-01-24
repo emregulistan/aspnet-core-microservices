@@ -8,17 +8,10 @@
 * Swagger Open API implementation	
 
 #### Checkout microservice which includes;
-* ASP.NET Web API application
+* ASP.NET Core Web API application
 * REST API principles, CRUD operations
 * **Redis database** connection and containerization
 * Publish BasketCheckout Queue with using **MassTransit and RabbitMQ**
-  
-#### Microservices Communication
-* Async Microservices Communication with **RabbitMQ Message-Broker Service**
-* Using **RabbitMQ Publish/Subscribe Topic** Exchange Model
-* Using **MassTransit** for abstraction over RabbitMQ Message-Broker system
-* Publishing BasketCheckout event queue from Basket microservices and Subscribing this event from Ordering microservices	
-* Create **RabbitMQ EventBus.Messages library** and add references Microservices
 
 #### Ordering Microservice
 * Implementing **DDD, CQRS, and Clean Architecture** with using Best Practices
@@ -41,6 +34,13 @@
 * Sample microservices/containers to reroute through the API Gateways
 * Run multiple different **API Gateway/BFF** container types	
 * The Gateway aggregation pattern in Shopping.Aggregator
+
+#### Microservices Communication
+* Async Microservices Communication with **RabbitMQ Message-Broker Service**
+* Using **RabbitMQ Publish/Subscribe Topic** Exchange Model
+* Using **MassTransit** for abstraction over RabbitMQ Message-Broker system
+* Publishing BasketCheckout event queue from Checkout microservices and Subscribing this event from Ordering microservices	
+* Create **RabbitMQ EventBus.Messages library** and add references Microservices
 
 #### Docker Compose establishment with all microservices on docker;
 * Containerization of microservices
