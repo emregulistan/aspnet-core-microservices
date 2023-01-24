@@ -98,7 +98,7 @@ services:
     container_name: ordering.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "ConnectionStrings:OrderingConnectionString=Server=orderdb;TrustServerCertificate=True;MultiSubnetFailover=True;Encrypt=False;Database=DbOrderDb;User Id=sa;Password=SwN12345678;"
+      - "ConnectionStrings:OrderingConnectionString=Server=orderdb;TrustServerCertificate=True;MultiSubnetFailover=True;Encrypt=False;Database=DockerOrderDb;User Id=sa;Password=SwN12345678;"
       - "EventBusSettings:HostAddress=amqp://guest:guest@rabbitmq:5672"
     depends_on:
       - orderdb
@@ -111,7 +111,7 @@ services:
     container_name: identity.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "ConnectionStrings:DefaultConnection=Server=identitydb;Port=5432;Database=DbIdentityDb;Integrated Security=true;User Id=admin;Password=admin1234;Pooling=true;"    
+      - "ConnectionStrings:DefaultConnection=Server=identitydb;Port=5432;Database=DockerIdentityDb;Integrated Security=true;User Id=admin;Password=admin1234;Pooling=true;"    
     depends_on:
       - identitydb
     ports:
